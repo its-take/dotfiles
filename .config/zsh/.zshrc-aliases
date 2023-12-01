@@ -46,7 +46,7 @@ alias struct='tree -al'
 
 # MISCELLANEOUS SECTION #
 
-alias v="neovim"
+alias v="nvim"
 
 alias grep='grep --color=auto'
 
