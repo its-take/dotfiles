@@ -34,3 +34,8 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 autoload -Uz compinit
 compinit
+
+
+# NEOFETCH SECTION #
+
+neofetch
