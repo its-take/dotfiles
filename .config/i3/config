@@ -1,0 +1,140 @@
+# ---------------------------------------- #
+#  _        _                          __  #
+# | |_ __ _| | _____   ___ ___  _ __  / _| #
+# | __/ _` | |/ / _ \ / __/ _ \| '_ \| |_  #
+# | || (_| |   <  __/| (_| (_) | | | |  _| #
+#  \__\__,_|_|\_\___(_)___\___/|_| |_|_|   #
+#                                          #
+# ---------------------------------------- #
+
+
+# MOD KEY SECTION #
+
+set $mod Mod4
+
+
+# APPLICATION SECTION #
+
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id nm-applet
+
+
+# TERMINAL SECTION #
+
+bindsym $mod+Return exec alacritty
+
+
+# WINDOW SECTION #
+
+bindsym $mod+q kill
+bindsym $mod+s exec rofi -show drun
+bindsym $mod+c exec rofi -show calc
+bindsym $mod+p exec bash "$HOME/.config/rofi/powermenu.sh"
+bindsym $mod+n exec bash "$HOME/.config/rofi/wifimenu.sh"
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+# SPLIT SECTION #
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+
+# FULLSCREEN SECTION #
+
+bindsym $mod+f fullscreen toggle
+
+
+# WORKSPACE SECTION #
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+workspace $ws1 output HDMI-1
+workspace $ws2 output HDMI-1
+workspace $ws3 output HDMI-1
+
+workspace $ws4 output DP-3
+workspace $ws5 output DP-3
+workspace $ws6 output DP-3
+
+workspace $ws7 output DP-1
+workspace $ws8 output DP-1
+workspace $ws9 output DP-1
+
+bindsym $mod+ampersand workspace number $ws1
+bindsym $mod+eacute workspace number $ws2
+bindsym $mod+quotedbl workspace number $ws3
+bindsym $mod+apostrophe workspace number $ws4
+bindsym $mod+parenleft workspace number $ws5
+bindsym $mod+minus workspace number $ws6
+bindsym $mod+egrave workspace number $ws7
+bindsym $mod+underscore workspace number $ws8
+bindsym $mod+ccedilla workspace number $ws9
+
+bindsym $mod+Shift+ampersand move container to workspace number $ws1
+bindsym $mod+Shift+eacute move container to workspace number $ws2
+bindsym $mod+Shift+quotedbl move container to workspace number $ws3
+bindsym $mod+Shift+apostrophe move container to workspace number $ws4
+bindsym $mod+Shift+parenleft move container to workspace number $ws5
+bindsym $mod+Shift+minus move container to workspace number $ws6
+bindsym $mod+Shift+egrave move container to workspace number $ws7
+bindsym $mod+Shift+underscore move container to workspace number $ws8
+bindsym $mod+Shift+ccedilla move container to workspace number $ws9
+
+
+# RESIZE SECTION #
+
+bindsym $mod+r mode "resize"
+
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+
+# GAPS SECTION #
+
+gaps inner 7px
+
+
+# WINDOW DECORATION SECTION #
+
+default_border pixel 0
+
+
+# MISC SECTION #
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+l exec betterlockscreen -l blur
+
+
+# SOFTWARE SECTION #
+
+exec feh --bg-scale "$HOME/.config/wallpapers/itachi-wallpaper.png"
+exec_always picom
+exec_always betterlockscreen -u "$HOME/.config/wallpapers/itachi-wallpaper.png"
+exec_always dunst
