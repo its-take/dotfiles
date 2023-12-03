@@ -17,6 +17,7 @@ configuration {
     font: "Hack Nerd Font Regular 14";
     modi: "window,drun,calc";
     show-icons: true;
+    icon-theme: "Papirus";
 }
 
 
