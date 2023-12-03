@@ -122,9 +122,8 @@ gaps inner 7px
 
 # WINDOW DECORATION SECTION #
 
-default_border pixel 2
+default_border pixel 0
 
-client.focused #C10F31 #C10F31 #C10F31 #C10F31 #C10F31 
 
 # MISC SECTION #
 
