@@ -1,0 +1,47 @@
+# ---------------------------------------- #
+#  _        _                          __  #
+# | |_ __ _| | _____   ___ ___  _ __  / _| #
+# | __/ _` | |/ / _ \ / __/ _ \| '_ \| |_  #
+# | || (_| |   <  __/| (_| (_) | | | |  _| #
+#  \__\__,_|_|\_\___(_)___\___/|_| |_|_|   #
+#                                          #
+# ---------------------------------------- #
+
+
+# OPTIONS SECTION #
+
+display_on=1
+span_image=false
+blur_level=1
+lock_timeout=300
+fx_list=(blur)
+pixel_scale=10,1000
+solid_color=333333
+wallpaper_cmd="feh --bg-scale"
+
+
+# THEME SECTION #
+
+loginbox=00000066
+loginshadow=00000000
+locktext="Type password"
+font="Hack Nerd Font"
+ringcolor=ffffffff
+insidecolor=000000ff
+separatorcolor=00000000
+ringvercolor=ffffffff
+insidevercolor=00000000
+ringwrongcolor=#DC0F34
+insidewrongcolor=#DC0F34
+timecolor=ffffffff
+time_format="%H : %M"
+greetercolor=ffffffff
+layoutcolor=ffffffff
+keyhlcolor=#DC0F34
+bshlcolor=#DC0F34
+veriftext="Checking password"
+verifcolor=ffffffff
+wrongtext="Error in password !"
+wrongcolor=#DC0F34
+modifcolor=#DC0F34
+bgcolor=000000ff
